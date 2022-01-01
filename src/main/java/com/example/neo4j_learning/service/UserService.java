@@ -1,10 +1,14 @@
 package com.example.neo4j_learning.service;
 
-import com.example.neo4j_learning.entity.UserEntity;
+import com.example.neo4j_learning.entity.PersonEntity;
 
 public interface UserService {
 
-  UserEntity save(UserEntity userEntity);
+  PersonEntity save(PersonEntity userEntity);
 
-  void addFriend(Long fromId, Long toId);
+  void addFriend(String fromId, String toId);
+
+  void removeFriend(Long fromId, Long toId);
+
+  Iterable<PersonEntity> getAll();
 }
